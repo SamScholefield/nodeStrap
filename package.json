@@ -10,7 +10,8 @@
     "jade": "*",
     "stylus": "*",
     "monk": "*",
-    "mongodb": "*"
+    "mongodb": "*",
+    "newrelic": "*"
   },
   "engines": {
     "node": "0.8.x",
