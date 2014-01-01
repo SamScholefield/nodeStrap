@@ -13,11 +13,11 @@ var mongo = require('mongodb');
 var monk = require('monk');
 
 //uncomment for heroku
-//var uri = process.env.MONGOLAB_URI;
-//var db = monk(uri)
+var uri = process.env.MONGOLAB_URI;
+var db = monk(uri)
 
 //uncomment for local
-var db = monk('localhost:27017/nodestrap');
+//var db = monk('localhost:27017/nodestrap');
 
 var app = express();
 
@@ -46,6 +46,7 @@ app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 app.get('/success', routes.success);
 app.get('/registersuccess', routes.registersuccess);
+app.get('/memberlist', routes.memberlist(db));
 app.get('/fail', routes.fail);
 
 app.post('/registeruser', routes.registeruser(db));

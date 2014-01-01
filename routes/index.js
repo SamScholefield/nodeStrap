@@ -43,6 +43,7 @@ exports.registeruser = function(db) {
         var lastName = req.body.lName;
         var userEmail = req.body.userEmail;
         var userPassword = req.body.userPasswordVeri;
+        var timestamp = new Date();
 
         // Set our collection
         var collection = db.get('usercollection');
@@ -52,7 +53,8 @@ exports.registeruser = function(db) {
             "firstName" : firstName,
             "lastName" : lastName,
             "userEmail" : userEmail,
-            "userPassword" : userPassword
+            "userPassword" : userPassword,
+            "regDate" : timestamp
         }, function (err, doc) {
             if (err) {
                 // If it failed, return error
@@ -103,3 +105,14 @@ exports.registeruser = function(db) {
 
     }
  }
+
+ exports.memberlist = function(db) {
+    return function(req, res) {
+        var collection = db.get('usercollection');
+        collection.find({},{},function(e,docs){
+            res.render('memberlist', {
+                'memberlist' : docs
+            });
+        });
+    };
+};
