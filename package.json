@@ -1,0 +1,19 @@
+{
+  "name": "nodeStrap_templates",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.7",
+    "jade": "*",
+    "stylus": "*",
+    "monk": "*",
+    "mongodb": "*"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}

@@ -1,0 +1,104 @@
+extends layout
+
+block content
+  #myCarousel.carousel.slide(data-ride='carousel')
+    //Indicators 
+    ol.carousel-indicators
+      li.active(data-target='#myCarousel', data-slide-to='0')
+      li(data-target='#myCarousel', data-slide-to='1')
+      li(data-target='#myCarousel', data-slide-to='2')
+    .carousel-inner
+      .item.active
+        img(src='/images/carobg.jpg', alt='First slide')
+        .container
+          .carousel-caption
+            h1 We teach stuff.
+            p
+              | Nodal point sign boy into bicycle assassin fetishism. Neural geodesic physical fetishism carbon sensory neural render-farm. Rain tanto smart-futurity construct tattoo face forwards boat. Engine Kowloon corrupted boat long-chain smart hydrocarbons.
+            p
+              a.btn.btn-lg.btn-primary(href='#', role='button') Learn more
+      .item
+        img(src='/images/carobg.jpg', alt='Second slide')
+        .container
+          .carousel-caption
+            h1 We learn stuff.
+            p
+              | Military-grade tiger-team. Nodality Tokyo neon table monofilament free-market city. Camera otaku range-rover urban with beef noodles soul-delay saturation point.
+            p
+              a.btn.btn-lg.btn-primary(href='#', role='button') Learn more
+      .item
+        img(src='/images/carobg.jpg', alt='Third slide')
+        .container
+          .carousel-caption
+            h1 We share stuff.
+            p
+              | Papier-mache market singularity savant augmented reality woman singularity tank-traps pen market j-pop sub-orbital. Physical hacker render-farm concrete tower human wristwatch.
+            p
+              a.btn.btn-lg.btn-primary(href='#', role='button') Learn more
+    a.left.carousel-control(href='#myCarousel', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left
+    a.right.carousel-control(href='#myCarousel', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right
+  //Marketing messaging and featurettes
+        //================================================== 
+  //Wrap the rest of the page in another container to center all the content. 
+  .container.marketing
+    //Three columns of text below the carousel 
+    .row
+      .col-lg-4
+        img.img-circle(data-src='holder.js/140x140', alt='Generic placeholder image')
+        h2 Bossman
+        p
+          | Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+        p
+          a.btn.btn-default(href='#', role='button') View details »
+     
+      .col-lg-4
+        img.img-circle(data-src='holder.js/140x140', alt='Generic placeholder image')
+        h2 Sidekick
+        p
+          | Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+        p
+          a.btn.btn-default(href='#', role='button') View details »
+    
+      .col-lg-4
+        img.img-circle(data-src='holder.js/140x140', alt='Generic placeholder image')
+        h2 Henchman
+        p
+          | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        p
+          a.btn.btn-default(href='#', role='button') View details »
+
+  //START THE FEATURETTES 
+  hr.featurette-divider
+  .row.featurette
+    .col-md-7
+      h2.featurette-heading
+        | Feature one. 
+        span.text-muted Yes, this is a feature.
+      p.lead
+        | Sentient girl boat rifle numinous weathered marketing. BASE jump semiotics cartel bridge media pen market. sign denim bicycle refrigerator knife receding math.
+    .col-md-5
+      img.featurette-image.img-responsive(data-src='holder.js/500x500/auto', alt='Generic placeholder image')
+  hr.featurette-divider
+  .row.featurette
+    .col-md-5
+      img.featurette-image.img-responsive(data-src='holder.js/500x500/auto', alt='Generic placeholder image')
+    .col-md-7
+      h2.featurette-heading
+        | Feature two. 
+        span.text-muted I am also a feature.
+      p.lead
+        | Bridge vehicle ablative nano-youtube network geodesic range-rover silent advert soul-delay chrome fluidity digital face forwards. nodal point artisanal vinyl faded concrete market garage face forwards.
+  hr.featurette-divider
+  .row.featurette
+    .col-md-7
+      h2.featurette-heading
+        | Feature three. 
+        span.text-muted Last on the list.
+      p.lead
+        | Chiba shrine artisanal otaku table human face forwards sensory shanty town sprawl 8-bit. knife marketing youtube construct wristwatch film urban smart- fluidity order-flow camera corrupted motion paranoid alcohol. dolphin dome industrial grade.
+    .col-md-5
+      img.featurette-image.img-responsive(data-src='holder.js/500x500/auto', alt='Generic placeholder image')
+  hr.featurette-divider
+//END THE FEATURETTES

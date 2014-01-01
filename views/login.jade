@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+  #login.container
+    form.form-signin(role='form', method='post', action='/loginuser')
+      h2.form-signin-heading Please sign in
+      input.form-control(type='text', placeholder='Email address', required='required', autofocus='autofocus' name='logemail')
+      input#passbtn.form-control(type='password', placeholder='Password', required='required' name='logpass')
+      label.checkbox
+        input(type='checkbox', value='remember-me' name='staylog')
+        | Remember me
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in

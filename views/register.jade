@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  
+  #login.container
+    form.form-signin(role='form', method='post', action='/registeruser')
+      h2.form-signin-heading Please register
+      input.form-control(type='text', placeholder='First name', required='required', autofocus='autofocus' name='fName')
+      input.form-control(type='text', placeholder='Last name', required='required' name='lName')
+      input.form-control(type='text', placeholder='Email address', required='required' name='userEmail')
+      input.form-control(type='password', placeholder='Password', required='required' name='userPassword')
+      input.form-control(type='password', placeholder='Repeat password', required='required' name='userPasswordVeri')
+      button#register.btn.btn-lg.btn-primary.btn-block(type='submit') Register
