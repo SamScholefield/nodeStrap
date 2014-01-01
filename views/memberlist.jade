@@ -8,6 +8,6 @@ block content
       ul
         each user, i in memberlist
           li
-            a(href="mailto:#{user.email}")= user.firstName
+            a(href="mailto:#{user.userEmail}")= user.firstName
       p
         a.btn.btn-default.btn-primary(href='/', role='button') Home »
