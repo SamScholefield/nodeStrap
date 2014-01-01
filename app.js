@@ -48,6 +48,7 @@ app.get('/success', routes.success);
 app.get('/registersuccess', routes.registersuccess);
 app.get('/memberlist', routes.memberlist(db));
 app.get('/fail', routes.fail);
+app.get('/settings', routes.settings);
 
 app.post('/registeruser', routes.registeruser(db));
 

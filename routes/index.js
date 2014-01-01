@@ -31,6 +31,10 @@ exports.fail = function(req, res){
   res.render('fail', { title: 'Fail' });
 };
 
+exports.settings = function(req, res){
+  res.render('settings', { title: 'settings' });
+};
+
 exports.registersuccess = function(req, res){
   res.render('registersuccess', { title: 'Successful registration' });
 };
