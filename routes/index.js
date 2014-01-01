@@ -31,6 +31,10 @@ exports.fail = function(req, res){
   res.render('fail', { title: 'Fail' });
 };
 
+exports.registersuccess = function(req, res){
+  res.render('registersuccess', { title: 'Successful registration' });
+};
+
 exports.registeruser = function(db) {
     return function(req, res) {
 
@@ -59,9 +63,9 @@ exports.registeruser = function(db) {
             }
             else {
                 // If it worked, set the header so the address bar and send user to success page
-                res.location("success");
+                res.location("registersuccess");
                 // And forward to success page
-                res.redirect("success");
+                res.redirect("registersuccess");
             }
         });
 

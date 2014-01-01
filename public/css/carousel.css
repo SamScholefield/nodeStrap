@@ -223,6 +223,11 @@ body {
 
 }
 
+#registersuccess{
+
+  color: green;
+}
+
 #fail{
   color: red;
 
