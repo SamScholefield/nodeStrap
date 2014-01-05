@@ -5,7 +5,13 @@
   "scripts": {
     "start": "node app.js"
   },
-  "dependencies": {
+  "repository" :
+  { 
+    "type" : "git",
+    "url" : "https://github.com/SamScholefield/nodeStrap"
+  },
+  "dependencies": 
+  {
     "express": "3.4.7",
     "jade": "*",
     "stylus": "*",
@@ -13,7 +19,8 @@
     "mongodb": "*",
     "newrelic": "*"
   },
-  "engines": {
+  "engines": 
+  {
     "node": "0.8.x",
     "npm": "1.1.x"
   }
