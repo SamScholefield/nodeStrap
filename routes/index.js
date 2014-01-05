@@ -45,7 +45,7 @@ exports.registeruser = function(db) {
         // Get our form values. These rely on the "name" attributes
         var firstName = req.body.fName;
         var lastName = req.body.lName;
-        var userEmail = req.body.userEmail;
+        var userEmailform = req.body.userEmail;
         var userPassword = req.body.userPasswordVeri;
         var timestamp = new Date();
 
@@ -53,27 +53,27 @@ exports.registeruser = function(db) {
         var collection = db.get('usercollection');
 
         // Submit to the DB
-        collection.insert({
-            "firstName" : firstName,
-            "lastName" : lastName,
-            "userEmail" : userEmail,
-            "userPassword" : userPassword,
-            "regDate" : timestamp
-        }, function (err, doc) {
-            if (err) {
-                // If it failed, return error
-                res.send("There was a problem adding the information to the database.");
-                res.location("fail");
-                // And forward to success page
-                res.redirect("failure");
-            }
-            else {
-                // If it worked, set the header so the address bar and send user to success page
-                res.location("registersuccess");
-                // And forward to success page
-                res.redirect("registersuccess");
-            }
-        });
+            collection.insert({
+                "firstName" : firstName,
+                "lastName" : lastName,
+                "userEmail" : userEmailform,
+                "userPassword" : userPassword,
+                "regDate" : timestamp
+            }, function (err, doc) {
+                if (err) {
+                    // If it failed, return error
+                    res.send("There was a problem adding the information to the database.");
+                    res.location("fail");
+                    // And forward to success page
+                    res.redirect("failure");
+                }
+                else {
+                    // If it worked, set the header so the address bar and send user to success page
+                    res.location("registersuccess");
+                    // And forward to success page
+                    res.redirect("registersuccess");
+                }
+            });
 
     }
  }

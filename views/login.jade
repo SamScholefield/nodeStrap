@@ -3,7 +3,7 @@ extends layout
 block content
 
   #login.container
-    form.form-signin(role='form', method='post', action='/loginuser')
+    form.form-signin(role='form', parsley-validate, parsley-trigger='change', method='post', action='/loginuser', novalidate='novalidate')
       h2.form-signin-heading Please sign in
       input.form-control(type='text', placeholder='Email address', required='required', autofocus='autofocus' name='logemail')
       input#passbtn.form-control(type='password', placeholder='Password', required='required' name='logpass')
