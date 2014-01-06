@@ -13,11 +13,11 @@ var mongo = require('mongodb');
 var monk = require('monk');
 
 //uncomment for heroku
-//var uri = process.env.MONGOLAB_URI;
-//var db = monk(uri)
+var uri = process.env.MONGOLAB_URI;
+var db = monk(uri)
 
 //uncomment for local
-var db = monk('localhost:27017/nodestrap');
+//var db = monk('localhost:27017/nodestrap');
 
 var app = express();
 
