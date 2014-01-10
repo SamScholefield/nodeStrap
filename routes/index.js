@@ -64,7 +64,7 @@ exports.registeruser = function(db) {
                     // If it failed, return error
                     res.send("There was a problem adding the information to the database.");
                     res.location("fail");
-                    // And forward to success page
+                    // And forward to failure page
                     res.redirect("failure");
                 }
                 else {
